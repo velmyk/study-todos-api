@@ -1,0 +1,40 @@
+{
+  "name": "learn-front-end-api",
+  "version": "0.0.1",
+  "description": "api to learn front-end",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "cd src && nodemon",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "prettier": "prettier --write ./src/**/*.js"
+  },
+  "author": "velmyk@gmail.com",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "5.0.1",
+    "express": "4.16.3",
+    "helmet": "3.12.0",
+    "lodash": "4.17.5",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "5.0.12",
+    "morgan": "1.9.0",
+    "nodemon": "1.17.2",
+    "shortid": "^2.2.12"
+  },
+  "devDependencies": {
+    "eslint": "4.19.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "prettier": "1.11.1"
+  },
+  "pre-commit": [
+    "prettier",
+    "lint"
+  ]
+}
