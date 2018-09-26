@@ -31,7 +31,7 @@ process.on('SIGINT', () => mongoose.connection.close(() => process.exit(0)));
 const app = express();
 
 app
-    .unsubscribe(cors())
+    .use(cors())
     .use(bodyParser.json({ limit: '50mb' }))
     .use(morgan('tiny'))
     .use(helmet())
